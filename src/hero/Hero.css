@@ -1,0 +1,118 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4rem; 
+  justify-content: space-evenly;
+  min-height: 100vh;
+  padding: 0 5%;
+  overflow: hidden;
+}
+
+.particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.intro {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.typewriter-text {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 2px;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+strong {
+  text-shadow: 1px 1px 1px;
+}
+
+.intro-text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: #f1f1f1;
+}
+
+/* Image container */
+.intro-img {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+/* Image itself – use vw for responsiveness */
+.intro-img img {
+  width: 20vw;              
+  max-width: 350px;       
+  min-width: 200px;        
+  border-radius: 50%;
+ 
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 1rem double rgba(153, 2, 153, 0.66);
+ 
+  
+ 
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .hero-section {
+    gap: 2rem;
+    padding: 0 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 4rem;
+    gap: 2rem;
+  }
+
+  .typewriter-text {
+    font-size: 2.2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .intro-img img {
+    width: 45vw;        
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-text {
+    font-size: 1.8rem;
+  }
+
+  .intro-img img {
+    width: 60vw;
+    max-width: 200px;
+  }
+}
